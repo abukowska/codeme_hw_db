@@ -16,7 +16,7 @@ public class Book {
 	
 	public Book() {
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}
