@@ -7,24 +7,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "books")
 public class Book {
-	
-	@Id // identyfikator rekordu
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ustalenie generowania identyfikatora
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String title;
 	private String author;
 	private Date publishYear;
 	private Integer amount;
-	
+
 	public Book() {
 	}
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -64,10 +62,10 @@ public class Book {
 	public void setAmount(Integer amount) {
 		this.amount = amount;
 	}
-	
+
 	@Override
 	public String toString() {
 		return String.format("%d) %s by %s", id, title, author);
-		
+
 	}
 }
