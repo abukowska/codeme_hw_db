@@ -23,13 +23,13 @@
 hs_err_pid*
 
 #other: metadata
-#.classpath
-#*.swp
-#.metadata/
-#.project
-#.settings/
-#bin/
-#
-##config files
-#resources/*.properties
-#/target/
+.classpath
+*.swp
+.metadata/
+.project
+.settings/
+bin/
+
+#config files
+resources/*.properties
+/target/
