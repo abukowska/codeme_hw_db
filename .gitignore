@@ -31,5 +31,5 @@ hs_err_pid*
 bin/
 
 #config files
-resources/*.properties
+*.properties
 /target/
