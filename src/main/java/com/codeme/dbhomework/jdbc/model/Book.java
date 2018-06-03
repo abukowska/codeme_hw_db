@@ -64,6 +64,5 @@ public class Book {
 	@Override
 	public String toString() {
 		return String.format("%d) %s by %s", id, title, author);
-		
 	}
 }
