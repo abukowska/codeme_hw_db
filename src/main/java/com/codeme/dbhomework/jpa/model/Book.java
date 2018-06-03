@@ -1,7 +1,6 @@
 package com.codeme.dbhomework.jpa.model;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -66,6 +65,5 @@ public class Book {
 	@Override
 	public String toString() {
 		return String.format("%d) %s by %s", id, title, author);
-
 	}
 }
