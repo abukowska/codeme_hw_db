@@ -1,28 +1,22 @@
-package com.codeme.dbhomework.jpamodel;
+package com.codeme.dbhomework.jdbc.model;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "books")
 public class Book {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	private Integer id;
 	private String title;
 	private String author;
 	private Date publishYear;
+	private DateFormat df = new SimpleDateFormat("yyyy-mm-dd");
 	private Integer amount;
-
+	
 	public Book() {
 	}
-
+	
 	public Integer getId() {
 		return id;
 	}
@@ -55,17 +49,21 @@ public class Book {
 		this.author = author;
 	}
 
-	public void setPublishYear(Date publishYear) {
-		this.publishYear = publishYear;
+	public void setPublishYear(String publishYear) {
+		try {
+			this.publishYear = df.parse(publishYear);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void setAmount(Integer amount) {
 		this.amount = amount;
 	}
-
+	
 	@Override
 	public String toString() {
 		return String.format("%d) %s by %s", id, title, author);
-
+		
 	}
 }

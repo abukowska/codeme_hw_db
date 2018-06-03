@@ -1,4 +1,4 @@
-package com.codeme.dbhomework;
+package com.codeme.dbhomework.jdbc;
 
 import java.io.FileInputStream;
 import java.io.IOException;

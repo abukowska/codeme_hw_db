@@ -1,4 +1,4 @@
-package com.codeme.dbhomework.jdbcmodel;
+package com.codeme.dbhomework.jdbc.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.codeme.dbhomework.GetConfigValues;
+import com.codeme.dbhomework.jdbc.GetConfigValues;
 
 public class Books {
 
@@ -18,6 +18,7 @@ public class Books {
 	private PreparedStatement stm = null;
 	private ResultSet resSet = null;
 
+	//db columns names
 	public enum Columns {
 		ID("id"), TITLE("title"), AUTHOR("author"), PUBLISHYEAR("publishYear"), AMOUNT("amount");
 

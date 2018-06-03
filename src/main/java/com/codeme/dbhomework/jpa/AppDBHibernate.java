@@ -1,4 +1,4 @@
-package com.codeme.dbhomework;
+package com.codeme.dbhomework.jpa;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.codeme.dbhomework.jpamodel.Book;
+import com.codeme.dbhomework.jpa.model.Book;
 
 public class AppDBHibernate {
 
